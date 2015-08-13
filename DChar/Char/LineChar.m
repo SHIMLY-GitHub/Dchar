@@ -32,7 +32,9 @@
     NSArray * arrayDate = @[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"];
     NSArray * array = @[@"11",@"11",@"13",@"13",@"12",@"13",@"10"];
    
-    [SmartSteps makResult:@"12" andMax:@"20" andSec:5 andExpon:1];
+    //[SmartSteps bothLocked:@"23" andMax:@"90" andSec:5];
+    NSDictionary * dic =  [SmartSteps coreCalc:@"-2.22" andMax:@"101.90" andSec:5];
+    NSLog(@"dic = %@",dic);
    // [self drawAxis_PointX:rect andArray:arrayDate];
     //[self drawAxis_PointY:rect andArray:nil];
     //[self drawQuadCurvePath:[self getPointArray:rect andArray:array]];

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5471D1CE-DE02-4CF8-B274-E72A55B25288</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DChar</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E40CA020-FAE4-410F-88FA-2C80EB0BE35D</key>
+		<string>https://github.com/SHIMLY-GitHub/Dchar.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DChar.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E40CA020-FAE4-410F-88FA-2C80EB0BE35D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/SHIMLY-GitHub/Dchar.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E40CA020-FAE4-410F-88FA-2C80EB0BE35D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E40CA020-FAE4-410F-88FA-2C80EB0BE35D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DChar</string>
+		</dict>
+	</array>
+</dict>
+</plist>

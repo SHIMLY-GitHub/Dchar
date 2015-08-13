@@ -9,6 +9,19 @@
 #import <Foundation/Foundation.h>
 
 @interface SmartSteps : NSObject
+@property (nonatomic,strong) NSArray * mySections;
+@property (nonatomic,strong) NSArray * mySteps;
+@property (nonatomic,strong) NSArray * custSection;
+@property (nonatomic,strong) NSArray * custSteps;
+@property (nonatomic,assign) BOOL minLocked;
+@property (nonatomic,assign) BOOL maxLocked;
 +(SmartSteps*) singleton;
-+(void)makResult:(NSString*) newMin andMax:(NSString*)newMax andSec:(int) section andExpon:(int) expon;
++(NSDictionary*)makResult:(NSString*) newMin andMax:(NSString*)newMax andSec:(int) section andExpon:(int) expon;
++(NSDictionary*) expNum :(NSString*)_number digit:(NSString*) _digit byFloor:(int)_byFloor;
++(NSDictionary*) bothLocked:(NSString*) min andMax:(NSString*) max andSec:(int) section;
+
++(NSArray*) cross0:(double) min andMax:(double) max andNewMin:(double) newMin andNewMax:(double) newMax;
++(NSDictionary*) forInteger:(NSString*) min andMax:(NSString *) max andSec:(int) section;
+
++(NSDictionary*) coreCalc:(NSString*) min andMax:(NSString *) max andSec:(int) section;
 @end
