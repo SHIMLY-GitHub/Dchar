@@ -25,8 +25,56 @@ static SmartSteps *_singleton;
     if (self) {
         self.mySections = @[@"4",@"5",@"6"];
         self.mySteps = @[@"10",@"20",@"25",@"50"];
+        self.minLocked = self.maxLocked  = NO;
     }
     return self;
+}
+
++(NSDictionary*) smartSteps:(NSString*) minString andMax:(NSString*) maxString andSection:(int) section andOpts:(NSDictionary*) opts
+{
+    NSArray * stepsArr = [SmartSteps singleton].mySteps;
+    NSArray * secsArr  = [SmartSteps singleton].mySections;
+    double min = [minString doubleValue];
+    double max = [maxString doubleValue];
+    
+    [SmartSteps singleton].custSteps = [opts valueForKey:@"step"] ? [opts valueForKey:@"step"] : stepsArr;
+    [SmartSteps singleton].custSection = [opts valueForKey:@"section"] ? [opts valueForKey:@"section"] : secsArr;
+    
+    section = section%99;
+    min = +min;
+    max = +max;
+    
+    if ([opts valueForKey:@"min"]) {
+        min = +[[opts valueForKey:@"min"] doubleValue];
+        [SmartSteps singleton].minLocked = YES;
+    }
+    
+    if ([opts valueForKey:@"max"]) {
+        max = +[[opts valueForKey:@"max"] doubleValue];
+        [SmartSteps singleton].maxLocked = YES;
+    }
+    if (min>max) {
+        double tmp =0.0;
+        tmp = max;
+        max = min;
+        min = tmp;
+    }
+    double span = max-min;
+    if ([SmartSteps singleton].minLocked && [SmartSteps singleton].maxLocked) {
+        return [self bothLocked:minString andMax:maxString andSec:section];
+    }
+    if (span<(section ? section :5)) {
+        
+        if ([self is_int:minString] && [self is_int:maxString]) {
+            return  [self forInteger:minString andMax:maxString andSec:section];
+        }else if(span==0)
+        {
+            return [self forSpan0:min andMax:max andSection:section];
+        }
+    }
+    
+    return [self coreCalc:minString andMax:maxString andSec:section];
+
 }
 
 +(NSDictionary*) bothLocked:(NSString*) min andMax:(NSString*) max andSec:(int) section
@@ -303,8 +351,8 @@ static SmartSteps *_singleton;
 }
 +(NSDictionary*) forInteger:(NSString*) min andMax:(NSString *) max andSec:(int) section
 {
-    double Dmin = [min doubleValue];
-    double Dmax = [max doubleValue];
+    int  Dmin = [min intValue];
+    int  Dmax = [max intValue];
     section = section ? section : 5;
     if ([SmartSteps singleton].minLocked) {
         
@@ -324,7 +372,7 @@ static SmartSteps *_singleton;
         
     }
     
-    return [self makResult:[NSString stringWithFormat:@"%f",Dmin] andMax:[NSString stringWithFormat:@"%f",Dmax] andSec:section andExpon:0];
+    return [self makResult:[NSString stringWithFormat:@"%d",Dmin] andMax:[NSString stringWithFormat:@"%d",Dmax] andSec:section andExpon:0];
 }
 +(NSDictionary*) coreCalc:(NSString*) min andMax:(NSString *) max andSec:(int) section
 {

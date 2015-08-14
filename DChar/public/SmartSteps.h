@@ -24,4 +24,6 @@
 +(NSDictionary*) forInteger:(NSString*) min andMax:(NSString *) max andSec:(int) section;
 
 +(NSDictionary*) coreCalc:(NSString*) min andMax:(NSString *) max andSec:(int) section;
++(NSDictionary*) smartSteps:(NSString*) minString andMax:(NSString*) maxString andSection:(int) section andOpts:(NSDictionary*) opts;
+
 @end
