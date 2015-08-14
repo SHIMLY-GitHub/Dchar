@@ -22,6 +22,7 @@
 		904977DB1B730876004AE36C /* UIView+DChar.m in Sources */ = {isa = PBXBuildFile; fileRef = 904977DA1B730876004AE36C /* UIView+DChar.m */; };
 		904977E01B730CC6004AE36C /* LineChar.m in Sources */ = {isa = PBXBuildFile; fileRef = 904977DF1B730CC6004AE36C /* LineChar.m */; };
 		904977E31B730D9B004AE36C /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 904977E21B730D9B004AE36C /* BaseView.m */; };
+		906249421B7DDDEB000B01D3 /* NSObject+Dchar.m in Sources */ = {isa = PBXBuildFile; fileRef = 906249411B7DDDEB000B01D3 /* NSObject+Dchar.m */; };
 		906972201B71D6DC009D981B /* CharController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9069721F1B71D6DC009D981B /* CharController.m */; };
 		906972231B71D9BD009D981B /* lineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 906972221B71D9BD009D981B /* lineController.m */; };
 		9069722E1B72068C009D981B /* BaseLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9069722D1B72068C009D981B /* BaseLineView.m */; };
@@ -61,6 +62,8 @@
 		904977DF1B730CC6004AE36C /* LineChar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineChar.m; sourceTree = "<group>"; };
 		904977E11B730D9B004AE36C /* BaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseView.h; sourceTree = "<group>"; };
 		904977E21B730D9B004AE36C /* BaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseView.m; sourceTree = "<group>"; };
+		906249401B7DDDEB000B01D3 /* NSObject+Dchar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Dchar.h"; sourceTree = "<group>"; };
+		906249411B7DDDEB000B01D3 /* NSObject+Dchar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Dchar.m"; sourceTree = "<group>"; };
 		9069721E1B71D6DC009D981B /* CharController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharController.h; sourceTree = "<group>"; };
 		9069721F1B71D6DC009D981B /* CharController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharController.m; sourceTree = "<group>"; };
 		906972211B71D9BD009D981B /* lineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lineController.h; sourceTree = "<group>"; };
@@ -178,6 +181,8 @@
 			children = (
 				904977D91B730876004AE36C /* UIView+DChar.h */,
 				904977DA1B730876004AE36C /* UIView+DChar.m */,
+				906249401B7DDDEB000B01D3 /* NSObject+Dchar.h */,
+				906249411B7DDDEB000B01D3 /* NSObject+Dchar.m */,
 				907AE1A21B7AE0DB00A171F9 /* SmartSteps.h */,
 				907AE1A31B7AE0DB00A171F9 /* SmartSteps.m */,
 			);
@@ -298,6 +303,7 @@
 				907AE1A41B7AE0DB00A171F9 /* SmartSteps.m in Sources */,
 				90310A331B71AF13002810D7 /* main.m in Sources */,
 				906972231B71D9BD009D981B /* lineController.m in Sources */,
+				906249421B7DDDEB000B01D3 /* NSObject+Dchar.m in Sources */,
 				904977DB1B730876004AE36C /* UIView+DChar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

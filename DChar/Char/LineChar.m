@@ -32,8 +32,8 @@
     NSArray * arrayDate = @[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"];
     NSArray * array = @[@"11",@"11",@"13",@"13",@"12",@"13",@"10"];
    
-  NSDictionary* dic =  [SmartSteps smartSteps:@"-12.33" andMax:@"102.11" andSection:5 andOpts:nil];
-    NSLog(@"dic = %@",dic);
+  NSDictionary* dic =  [SmartSteps smartSteps:@"-1.33" andMax:@"102.11" andSection:0 andOpts:nil];
+    
     
    // [self drawAxis_PointX:rect andArray:arrayDate];
     //[self drawAxis_PointY:rect andArray:nil];

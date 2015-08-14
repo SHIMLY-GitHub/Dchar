@@ -7,7 +7,7 @@
 //
 
 #import "UIView+DChar.h"
-
+#import "NSObject+Dchar.h"
 
 @implementation UIView (DChar)
 
@@ -15,7 +15,7 @@
 {
     CGFloat  width  = rect.size.width;
     CGFloat  height = rect.size.height;
-
+    
  
     //起点坐标
     CGFloat  originX = rect.origin.x+left;

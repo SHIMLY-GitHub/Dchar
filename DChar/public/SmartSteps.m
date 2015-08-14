@@ -570,16 +570,24 @@ static SmartSteps *_singleton;
     double tempMax;
     
     double minC = [[expMin valueForKey:@"c"] doubleValue];
-    double maxC = [[expMin valueForKey:@"c"] doubleValue];
+    double maxC = [[expMax valueForKey:@"c"] doubleValue];
     
     
     NSArray * custArray = [SmartSteps singleton].custSection;
+    
+    
     NSArray * stepArr = [SmartSteps singleton].custSteps;
     NSMutableArray * reference = [[NSMutableArray alloc] init];
     
-    for (int i=custArray.count;i--;) {
+   
+    for (int i=0;i<custArray.count;i++) {
         section = [[custArray objectAtIndex:i] intValue];
+       
+       
         tempStep = [self getCeil:[NSString stringWithFormat:@"%f",(maxC-minC)/section] andRounds:stepArr];
+       
+       // NSLog(@"%@",tempStep);
+        
         int  tempStepE = [[tempStep valueForKey:@"e"] intValue];
         double  tempStepC = [[tempStep valueForKey:@"c"] doubleValue];
         DtempStep = tempStepC * pow(10, tempStepE);
@@ -587,8 +595,10 @@ static SmartSteps *_singleton;
         tempMax = ceil(maxC/DtempStep) * DtempStep;
         
         reference[i] = @{@"min": [NSNumber numberWithDouble:tempMin],@"max":[NSNumber numberWithDouble:tempMax],@"step":[NSNumber numberWithDouble:DtempStep],@"span":[NSNumber numberWithDouble:tempMax-tempMin]};
-        
+      
     }
+    
+    
   NSArray * referStore =   [reference sortedArrayUsingComparator:^NSComparisonResult(NSDictionary* dic1,NSDictionary * dic2){
        
         double span1 = [[dic1 valueForKey:@"span"] doubleValue];
@@ -661,7 +671,7 @@ static SmartSteps *_singleton;
         expon +=1;
         i=0;
         
-        while (cNum > [[rounds objectAtIndex:0] doubleValue]) {
+        while (cNum > [[rounds objectAtIndex:i] doubleValue]) {
             i++;
         }
     }
