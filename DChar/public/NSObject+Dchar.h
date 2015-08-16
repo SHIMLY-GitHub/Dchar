@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface NSObject (Dchar)
--(void)test;
+-(NSDictionary*)axisyList:(NSString*) min andMax:(NSString*) max;
 @end

@@ -51,7 +51,6 @@
     [self drawAxis_Y:rect];
     [self drawAxis_X:rect];
     
-   
 }
 
 
@@ -99,6 +98,16 @@
     CGContextAddLineToPoint(context, AXIS_X+axisWidth, AXIS_Y+[self getAxis_Height:rect]);
     CGContextDrawPath(context, kCGPathFillStroke);
     
+}
+-(void) drawAxisLineY:(CGRect) rect andArray:(NSArray*) array
+{
+    NSNumber* maxNumber =    [array valueForKeyPath:@"@max.floatValue"];
+    NSNumber* minNumber =    [array valueForKeyPath:@"@min.floatValue"];
+  
+   NSDictionary* dic =  [self axisyList:[NSString stringWithFormat:@"%@",minNumber] andMax:[NSString stringWithFormat:@"%@",maxNumber]];
+    
+    
+  
 }
 //绘制平均值
 -(CGMutablePathRef) avgPath

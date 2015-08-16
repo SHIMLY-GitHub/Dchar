@@ -7,11 +7,19 @@
 //
 
 #import "NSObject+Dchar.h"
+#import "SmartSteps.h"
 
 @implementation NSObject (Dchar)
 
--(void)test
+-(NSDictionary*)axisyList:(NSString*) min andMax:(NSString*) max
 {
-    NSLog(@"++++");
+    if ([min doubleValue]>=0) {
+        min = @"0";
+    }
+    
+  NSDictionary* dic =  [SmartSteps smartSteps:min andMax:max andSection:0 andOpts:nil];
+ 
+    return dic;
+    
 }
 @end

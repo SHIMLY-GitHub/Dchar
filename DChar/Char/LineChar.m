@@ -31,15 +31,15 @@
     
     NSArray * arrayDate = @[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"];
     NSArray * array = @[@"11",@"11",@"13",@"13",@"12",@"13",@"10"];
-   
-  NSDictionary* dic =  [SmartSteps smartSteps:@"-1.33" andMax:@"102.11" andSection:0 andOpts:nil];
     
+    [self drawAxisLineY:rect andArray:array];
     
    // [self drawAxis_PointX:rect andArray:arrayDate];
-    //[self drawAxis_PointY:rect andArray:nil];
+   // [self drawAxis_PointY:rect andArray:nil];
     //[self drawQuadCurvePath:[self getPointArray:rect andArray:array]];
     
 }
+
 
 
 -(void) drawAxis_PointY:(CGRect)rect andArray:(NSArray*) _array
@@ -56,7 +56,7 @@
      */
     
     // ((AXIS_Y)+[self getAxis_Height:rect])-([self getAxis_Height:rect]/array.count)*index
-    
+
     
     NSMutableDictionary *Axis_YDic = [NSMutableDictionary dictionary];
     

@@ -18,5 +18,7 @@
 -(CGFloat)pointY:(CGRect) rect andNumber:(NSInteger) number andMaxNumber:(NSInteger)maxNumber;
 -(CGFloat)pointX:(CGRect) rect andCount: (NSInteger) count andLocation:(NSInteger) location;
 
+-(void) drawAxisLineY:(CGRect) rect andArray:(NSArray*) array;
+
 
 @end
